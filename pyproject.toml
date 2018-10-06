@@ -1,0 +1,11 @@
+[tool.towncrier]
+package = 'reports'
+package_dir = 'reports'
+filename = 'NEWS.md'
+directory = ".news"
+template = ".news/template.md"
+title_format = "# {name} {version} ({project_date})"
+issue_format = "#{issue} <jira/browse/{issue}>"
+start_string = "<!-- TOWNCRIER -->\n"
+underlines = ["", "##", "###"]
+
