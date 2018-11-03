@@ -2,8 +2,20 @@
 filename = 'NEWS.md'
 directory = ".news/fragments"
 template = ".news/templates/template.md"
-title_format = "# {name} {version} ({project_date})"
-issue_format = "#{issue} <jira/browse/{issue}>"
+title_format = "## {name} {version} ({project_date})"
+issue_format = "{issue} <jira/browse/{issue}>"
 start_string = "<!-- TOWNCRIER -->\n"
-underlines = ["", "##", "###"]
+underlines = ["", "###"]
 
+    [[tool.towncrier.section]]
+    path = ""
+
+	[[tool.towncrier.type]]
+    directory = "bugfix"
+    name = "Bugfixes"
+    showcontent = true
+
+    [[tool.towncrier.type]]
+    directory = "compactor"
+    name = "Data Lake Compactor"
+    showcontent = true
